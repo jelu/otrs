@@ -1,0 +1,14 @@
+# Disable the webinstaller, it is done by the Debian package.
+
+diff -Naur otrs-3.1.0.beta3.orig/Kernel/Config.pm.dist otrs-3.1.0.beta3/Kernel/Config.pm.dist
+--- otrs-3.1.0.beta3.orig/Kernel/Config.pm.dist	2012-01-15 18:38:16.056103273 +0100
++++ otrs-3.1.0.beta3/Kernel/Config.pm.dist	2012-01-15 18:38:36.307673061 +0100
+@@ -87,6 +87,8 @@
+     # $Self->{CheckMXRecord} = 0;
+ 
+     # ---------------------------------------------------- #
++    # switch off the web based installer for the Debian package
++    $Self->{SecureMode} = 1;
+ 
+     # ---------------------------------------------------- #
+     # data inserted by installer                           #

@@ -1,0 +1,4 @@
+version=3
+opts="dversionmangle=s/\+dfsg\d//,uversionmangle=s/\.beta/~beta/;s/\.rc/~rc/" \
+http://ftp.otrs.org/pub/otrs/otrs-(.*).tar.gz \
+  debian debian/orig-tar.sh

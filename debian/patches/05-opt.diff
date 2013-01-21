@@ -1,0 +1,30 @@
+# Use /usr/share instead of /opt as otrs "home".
+
+diff -Naur otrs-3.1.0.beta3.orig/Kernel/Config.pm.dist otrs-3.1.0.beta3/Kernel/Config.pm.dist
+--- otrs-3.1.0.beta3.orig/Kernel/Config.pm.dist	2011-09-16 12:58:28.000000000 +0200
++++ otrs-3.1.0.beta3/Kernel/Config.pm.dist	2012-01-15 18:31:04.478258867 +0100
+@@ -63,7 +63,7 @@
+     # ---------------------------------------------------- #
+     # fs root directory
+     # ---------------------------------------------------- #
+-    $Self->{Home} = '/opt/otrs';
++    $Self->{Home} = '/usr/share/otrs';
+ 
+     # ---------------------------------------------------- #
+     # insert your own config settings "here"               #
+diff -Naur otrs-3.1.0.beta3.orig/scripts/apache2-perl-startup.pl otrs-3.1.0.beta3/scripts/apache2-perl-startup.pl
+--- otrs-3.1.0.beta3.orig/scripts/apache2-perl-startup.pl	2011-12-16 08:25:29.000000000 +0100
++++ otrs-3.1.0.beta3/scripts/apache2-perl-startup.pl	2012-01-15 18:32:16.292419838 +0100
+@@ -36,9 +36,9 @@
+ use ModPerl::Util;
+ 
+ # set otrs lib path!
+-use lib "/opt/otrs/";
+-use lib "/opt/otrs/Kernel/cpan-lib";
+-use lib "/opt/otrs/Custom";
++use lib "/usr/share/otrs/";
++use lib "/usr/share/otrs/Kernel/cpan-lib";
++use lib "/usr/share/otrs/Custom";
+ 
+ # pull in things we will use in most requests so it is read and compiled
+ # exactly once

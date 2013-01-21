@@ -1,0 +1,45 @@
+#!/bin/sh
+
+set -e
+
+OTRSHOME=/usr/share/otrs
+OTRS_VAR=/var/lib/otrs
+
+case "$1" in
+	install)
+		adduser --system --home $OTRSHOME --no-create-home --ingroup www-data otrs
+	;;
+	upgrade)
+		if [ -e "$OTRS_VAR/httpd/htdocs/yui/2.7.0/build" ]; then
+			if [ ! -h "$OTRS_VAR/httpd/htdocs/yui/2.7.0/build" ]; then
+				# Remove old yui build dir, so that dpkg replaces it with the
+				# new symlink.
+				rm -rf $OTRS_VAR/httpd/htdocs/yui/2.7.0/build
+			fi
+		fi
+		if [ -e "$OTRSHOME/Kernel/Config/Files" ]; then
+			if [ ! -h "$OTRSHOME/Kernel/Config/Files" ]; then
+				# Move dir to new location.
+				mkdir -p $OTRS_VAR/Config
+				mkdir -p $OTRS_VAR/Config_deb_upgrade
+				mv $OTRSHOME/Kernel/Config/Files $OTRS_VAR/Config/
+			fi
+		fi
+		if [ -e "$OTRS_VAR/Config/ZZZAuto.pm" ]; then
+			mv $OTRS_VAR/Config/ZZZAuto.pm $OTRS_VAR/Config/Files/ZZZAuto.pm
+			cp $OTRS_VAR/Config/Files/ZZZAuto.pm $OTRS_VAR/Config_deb_upgrade
+	    fi
+		if [ -e "$OTRS_VAR/Config/ZZZAAuto.pm" ]; then
+			mv $OTRS_VAR/Config/ZZZAAuto.pm $OTRS_VAR/Config/Files/ZZZAAuto.pm
+			cp $OTRS_VAR/Config/Files/ZZZAAuto.pm $OTRS_VAR/Config_deb_upgrade
+		fi
+	;;
+	abort-upgrade)
+	;;
+	*)
+		echo "preinst called with unknown argument \`$1'" 1>&2
+		exit 1
+	;;
+esac
+
+#DEBHELPER#

@@ -1,0 +1,25 @@
+# Use the system libjs package, instead of the embedded one.
+
+diff -Naur otrs-3.1.3.orig/Kernel/Config/Defaults.pm otrs-3.1.3/Kernel/Config/Defaults.pm
+--- otrs-3.1.3.orig/Kernel/Config/Defaults.pm	2012-03-22 16:05:27.000000000 +0100
++++ otrs-3.1.3/Kernel/Config/Defaults.pm	2012-03-29 15:56:02.752313236 +0200
+@@ -897,7 +897,7 @@
+ 
+     # Customer Common JS
+     $Self->{'Loader::Customer::CommonJS'}->{'000-Framework'} =  [
+-      'thirdparty/jquery-1.6.4/jquery.js',
++      'thirdparty/jquery/jquery.js',
+       'thirdparty/stacktrace-0.3/stacktrace.js',
+       'Core.Debug.js',
+       'Core.Exception.js',
+@@ -911,8 +911,8 @@
+     # Agent Common JS
+     $Self->{'Loader::Agent::CommonJS'}->{'000-Framework'} =  [
+       'thirdparty/json/json2.js',
+-      'thirdparty/jquery-1.6.4/jquery.js',
+-      'thirdparty/jquery-ui-1.8.16/jquery-ui.js',
++      'thirdparty/jquery/jquery.js',
++      'thirdparty/jquery-ui/jquery-ui.js',
+       'thirdparty/jquery-validate-1.9/jquery.validate.js',
+       'thirdparty/stacktrace-0.3/stacktrace.js',
+       'Core.JavaScriptEnhancements.js',

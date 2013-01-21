@@ -1,0 +1,77 @@
+# Add full paths to the font files, so that the PDF exports work.
+
+diff -Naur otrs2-3.1.7+dfsg1.orig/Kernel/Config/Files/Framework.xml otrs2-3.1.7+dfsg1/Kernel/Config/Files/Framework.xml
+--- otrs2-3.1.7+dfsg1.orig/Kernel/Config/Files/Framework.xml	2012-07-03 10:38:50.000000000 +0200
++++ otrs2-3.1.7+dfsg1/Kernel/Config/Files/Framework.xml	2012-07-03 10:44:02.581785461 +0200
+@@ -2717,7 +2717,7 @@
+         <Group>Framework</Group>
+         <SubGroup>Core::PDF</SubGroup>
+         <Setting>
+-            <String Regex="">DejaVuSans.ttf</String>
++            <String Regex="">/usr/share/fonts/truetype/ttf-dejavu/DejaVuSans.ttf</String>
+         </Setting>
+     </ConfigItem>
+     <ConfigItem Name="PDF::TTFontFile###ProportionalBold" Required="1" Valid="1">
+@@ -2725,7 +2725,7 @@
+         <Group>Framework</Group>
+         <SubGroup>Core::PDF</SubGroup>
+         <Setting>
+-            <String Regex="">DejaVuSans-Bold.ttf</String>
++            <String Regex="">/usr/share/fonts/truetype/ttf-dejavu/DejaVuSans-Bold.ttf</String>
+         </Setting>
+     </ConfigItem>
+     <ConfigItem Name="PDF::TTFontFile###ProportionalItalic" Required="0" Valid="0">
+@@ -2733,7 +2733,7 @@
+         <Group>Framework</Group>
+         <SubGroup>Core::PDF</SubGroup>
+         <Setting>
+-            <String Regex="">DejaVuSans-Oblique.ttf</String>
++            <String Regex="">/usr/share/fonts/truetype/ttf-dejavu/DejaVuSans-Oblique.ttf</String>
+         </Setting>
+     </ConfigItem>
+     <ConfigItem Name="PDF::TTFontFile###ProportionalBoldItalic" Required="1" Valid="1">
+@@ -2741,7 +2741,7 @@
+         <Group>Framework</Group>
+         <SubGroup>Core::PDF</SubGroup>
+         <Setting>
+-            <String Regex="">DejaVuSans-BoldOblique.ttf</String>
++            <String Regex="">/usr/share/fonts/truetype/ttf-dejavu/DejaVuSans-BoldOblique.ttf</String>
+         </Setting>
+     </ConfigItem>
+     <ConfigItem Name="PDF::TTFontFile###Monospaced" Required="1" Valid="1">
+@@ -2749,7 +2749,7 @@
+         <Group>Framework</Group>
+         <SubGroup>Core::PDF</SubGroup>
+         <Setting>
+-            <String Regex="">DejaVuSansMono.ttf</String>
++            <String Regex="">/usr/share/fonts/truetype/ttf-dejavu/DejaVuSansMono.ttf</String>
+         </Setting>
+     </ConfigItem>
+     <ConfigItem Name="PDF::TTFontFile###MonospacedBold" Required="0" Valid="0">
+@@ -2757,7 +2757,7 @@
+         <Group>Framework</Group>
+         <SubGroup>Core::PDF</SubGroup>
+         <Setting>
+-            <String Regex="">DejaVuSansMono-Bold.ttf</String>
++            <String Regex="">/usr/share/fonts/truetype/ttf-dejavu/DejaVuSansMono-Bold.ttf</String>
+         </Setting>
+     </ConfigItem>
+     <ConfigItem Name="PDF::TTFontFile###MonospacedItalic" Required="0" Valid="0">
+@@ -2765,7 +2765,7 @@
+         <Group>Framework</Group>
+         <SubGroup>Core::PDF</SubGroup>
+         <Setting>
+-            <String Regex="">DejaVuSansMono-Oblique.ttf</String>
++            <String Regex="">/usr/share/fonts/truetype/ttf-dejavu/DejaVuSansMono-Oblique.ttf</String>
+         </Setting>
+     </ConfigItem>
+     <ConfigItem Name="PDF::TTFontFile###MonospacedBoldItalic" Required="0" Valid="0">
+@@ -2773,7 +2773,7 @@
+         <Group>Framework</Group>
+         <SubGroup>Core::PDF</SubGroup>
+         <Setting>
+-            <String Regex="">DejaVuSansMono-BoldOblique.ttf</String>
++            <String Regex="">/usr/share/fonts/truetype/ttf-dejavu/DejaVuSansMono-BoldOblique.ttf</String>
+         </Setting>
+     </ConfigItem>
+     <ConfigItem Name="PGP" Required="1" Valid="1">

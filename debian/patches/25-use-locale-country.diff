@@ -1,0 +1,16 @@
+# Use the correct module Locale::Country for the all_country_names function.
+# Closes: #674475
+
+ 
+diff -Naur otrs-3.1.6.orig/Kernel/System/ReferenceData.pm otrs-3.1.6/Kernel/System/ReferenceData.pm
+--- otrs-3.1.6.orig/Kernel/System/ReferenceData.pm	2012-05-31 11:17:28.000000000 +0200
++++ otrs-3.1.6/Kernel/System/ReferenceData.pm	2012-06-05 10:14:42.149785092 +0200
+@@ -14,7 +14,7 @@
+ use strict;
+ use warnings;
+ 
+-use Locale::Codes::Country qw(all_country_names);
++use Locale::Country qw(all_country_names);
+ 
+ use vars qw(@ISA $VERSION);
+ $VERSION = qw($Revision: 1.2.2.1 $) [1];

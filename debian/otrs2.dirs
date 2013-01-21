@@ -1,0 +1,10 @@
+/etc/apache2/conf.d
+/etc/cron.d
+/etc/otrs/Kernel/Config
+/usr/share/dbconfig-common/data/otrs2/install
+/usr/share/dbconfig-common/data/otrs2/upgrade/pgsql
+/usr/share/dbconfig-common/data/otrs2/upgrade/mysql
+/usr/share/dbconfig-common/scripts/otrs2/upgrade/mysql
+/usr/share/dbconfig-common/scripts/otrs2/upgrade/pgsql
+/var/lib/otrs/Config
+/var/spool/otrs
