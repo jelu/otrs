@@ -5,6 +5,6 @@ set -e
 . /usr/share/debconf/confmodule
 . /usr/share/dbconfig-common/dpkg/prerm
 
-dbc_go otrs2 "$@"
+dbc_go otrs3 "$@"
 
 #DEBHELPER#

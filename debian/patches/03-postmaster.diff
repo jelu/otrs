@@ -1,4 +1,4 @@
-# Do not get emails with PostMaster, if otrs2 is put into maintenance mode.
+# Do not get emails with PostMaster, if otrs3 is put into maintenance mode.
 
 --- a/bin/otrs.PostMaster.pl
 +++ b/bin/otrs.PostMaster.pl

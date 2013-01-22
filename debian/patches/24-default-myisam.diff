@@ -1,36 +1,36 @@
 # Set the default storage engine for MySQL to MyISAM.
 # Closes: #674122
 
-diff -Naur otrs2-3.1.5+dfsg1.orig/scripts/database/otrs-initial_insert.mysql.sql otrs2-3.1.5+dfsg1/scripts/database/otrs-initial_insert.mysql.sql
---- otrs2-3.1.5+dfsg1.orig/scripts/database/otrs-initial_insert.mysql.sql	2012-01-26 13:54:50.000000000 +0100
-+++ otrs2-3.1.5+dfsg1/scripts/database/otrs-initial_insert.mysql.sql	2012-05-28 13:17:24.276040533 +0200
+diff -Naur otrs3-3.1.5+dfsg1.orig/scripts/database/otrs-initial_insert.mysql.sql otrs3-3.1.5+dfsg1/scripts/database/otrs-initial_insert.mysql.sql
+--- otrs3-3.1.5+dfsg1.orig/scripts/database/otrs-initial_insert.mysql.sql	2012-01-26 13:54:50.000000000 +0100
++++ otrs3-3.1.5+dfsg1/scripts/database/otrs-initial_insert.mysql.sql	2012-05-28 13:17:24.276040533 +0200
 @@ -1,3 +1,5 @@
 +set default_storage_engine = 'MyISAM';
 +
  # ----------------------------------------------------------
  #  driver: mysql, generated: 2012-01-26 13:53:54
  # ----------------------------------------------------------
-diff -Naur otrs2-3.1.5+dfsg1.orig/scripts/database/otrs-schema.mysql.sql otrs2-3.1.5+dfsg1/scripts/database/otrs-schema.mysql.sql
---- otrs2-3.1.5+dfsg1.orig/scripts/database/otrs-schema.mysql.sql	2011-12-08 12:09:33.000000000 +0100
-+++ otrs2-3.1.5+dfsg1/scripts/database/otrs-schema.mysql.sql	2012-05-28 13:16:38.885358130 +0200
+diff -Naur otrs3-3.1.5+dfsg1.orig/scripts/database/otrs-schema.mysql.sql otrs3-3.1.5+dfsg1/scripts/database/otrs-schema.mysql.sql
+--- otrs3-3.1.5+dfsg1.orig/scripts/database/otrs-schema.mysql.sql	2011-12-08 12:09:33.000000000 +0100
++++ otrs3-3.1.5+dfsg1/scripts/database/otrs-schema.mysql.sql	2012-05-28 13:16:38.885358130 +0200
 @@ -1,3 +1,5 @@
 +set default_storage_engine = 'MyISAM';
 +
  # ----------------------------------------------------------
  #  driver: mysql, generated: 2011-12-08 11:40:33
  # ----------------------------------------------------------
-diff -Naur otrs2-3.1.5+dfsg1.orig/scripts/DBUpdate-to-3.1.mysql.sql otrs2-3.1.5+dfsg1/scripts/DBUpdate-to-3.1.mysql.sql
---- otrs2-3.1.5+dfsg1.orig/scripts/DBUpdate-to-3.1.mysql.sql	2012-03-22 12:05:06.000000000 +0100
-+++ otrs2-3.1.5+dfsg1/scripts/DBUpdate-to-3.1.mysql.sql	2012-05-28 13:15:52.402125536 +0200
+diff -Naur otrs3-3.1.5+dfsg1.orig/scripts/DBUpdate-to-3.1.mysql.sql otrs3-3.1.5+dfsg1/scripts/DBUpdate-to-3.1.mysql.sql
+--- otrs3-3.1.5+dfsg1.orig/scripts/DBUpdate-to-3.1.mysql.sql	2012-03-22 12:05:06.000000000 +0100
++++ otrs3-3.1.5+dfsg1/scripts/DBUpdate-to-3.1.mysql.sql	2012-05-28 13:15:52.402125536 +0200
 @@ -1,3 +1,5 @@
 +set default_storage_engine = 'MyISAM';
 +
  # ----------------------------------------------------------
  #  driver: mysql, generated: 2012-03-22 12:00:39
  # ----------------------------------------------------------
-diff -Naur otrs2-3.1.5+dfsg1.orig/scripts/DBUpdate-to-3.1-post.mysql.sql otrs2-3.1.5+dfsg1/scripts/DBUpdate-to-3.1-post.mysql.sql
---- otrs2-3.1.5+dfsg1.orig/scripts/DBUpdate-to-3.1-post.mysql.sql	2012-03-22 12:05:06.000000000 +0100
-+++ otrs2-3.1.5+dfsg1/scripts/DBUpdate-to-3.1-post.mysql.sql	2012-05-28 13:15:43.013435246 +0200
+diff -Naur otrs3-3.1.5+dfsg1.orig/scripts/DBUpdate-to-3.1-post.mysql.sql otrs3-3.1.5+dfsg1/scripts/DBUpdate-to-3.1-post.mysql.sql
+--- otrs3-3.1.5+dfsg1.orig/scripts/DBUpdate-to-3.1-post.mysql.sql	2012-03-22 12:05:06.000000000 +0100
++++ otrs3-3.1.5+dfsg1/scripts/DBUpdate-to-3.1-post.mysql.sql	2012-05-28 13:15:43.013435246 +0200
 @@ -1,3 +1,5 @@
 +set default_storage_engine = 'MyISAM';
 +

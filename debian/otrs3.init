@@ -1,12 +1,12 @@
 #!/bin/sh
 ### BEGIN INIT INFO
-# Provides:          otrs2
+# Provides:          otrs3
 # Required-Start:    $local_fs $remote_fs
 # Required-Stop:     $local_fs $remote_fs
 # Default-Start:     2 3 4 5
 # Default-Stop:      0 1 6
-# Short-Description: otrs2 initscript
-# Description:       switches otrs2 from maintainance into active mode and back
+# Short-Description: otrs3 initscript
+# Description:       switches otrs3 from maintainance into active mode and back
 ### END INIT INFO
 
 case "$1" in
@@ -24,10 +24,10 @@ case "$1" in
     ;;
 	status)
 		if [ -L /usr/share/otrs/var/httpd/htdocs/maintenance.html ]; then
-			echo "otrs2 is in maintenance mode."
+			echo "otrs3 is in maintenance mode."
 			exit 1
 		fi
-		echo "otrs2 is currently running."
+		echo "otrs3 is currently running."
 	;;
     restart|force-reload|reload)
     ;;

@@ -1,6 +1,6 @@
 otrs (2.0.4p01-13) unstable; urgency=low
 
-  The cron jobs are now handled by the init script /etc/init.d/otrs2. The
+  The cron jobs are now handled by the init script /etc/init.d/otrs3. The
   content of the files /etc/cron.d/otrs_* will be moved to /etc/otrs/cron
   before the files are renamed to /etc/cron.d/otrs_*.dpkg-old when upgrading
   from older package versions. You may remove those backup files.
@@ -13,7 +13,7 @@ otrs (2.0.4p01-13) unstable; urgency=low
 
 otrs (2.0.4p01-11) unstable; urgency=low
 
-  The otrs2 package now uses dbconfig-common which enables automatic database
+  The otrs3 package now uses dbconfig-common which enables automatic database
   setup, upgrades and removal. Currently dbconfig-common only supports
   postgresql and mysql. If you are using a different database type you should
   answer 'No' to the question if you want to use dbconfig-common and you must
@@ -27,7 +27,7 @@ otrs (2.0.4p01-11) unstable; urgency=low
 
 otrs (2.0.4p01-9) unstable; urgency=low
 
-  The apache configuration file has been moved to /etc/apache2/conf.d/otrs2.
+  The apache configuration file has been moved to /etc/apache2/conf.d/otrs3.
 
  -- Torsten Werner <twerner@debian.org>  Tue, 18 Jul 2006 07:16:08 +0200
 

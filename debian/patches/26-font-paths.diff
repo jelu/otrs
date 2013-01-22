@@ -1,8 +1,8 @@
 # Add full paths to the font files, so that the PDF exports work.
 
-diff -Naur otrs2-3.1.7+dfsg1.orig/Kernel/Config/Files/Framework.xml otrs2-3.1.7+dfsg1/Kernel/Config/Files/Framework.xml
---- otrs2-3.1.7+dfsg1.orig/Kernel/Config/Files/Framework.xml	2012-07-03 10:38:50.000000000 +0200
-+++ otrs2-3.1.7+dfsg1/Kernel/Config/Files/Framework.xml	2012-07-03 10:44:02.581785461 +0200
+diff -Naur otrs3-3.1.7+dfsg1.orig/Kernel/Config/Files/Framework.xml otrs3-3.1.7+dfsg1/Kernel/Config/Files/Framework.xml
+--- otrs3-3.1.7+dfsg1.orig/Kernel/Config/Files/Framework.xml	2012-07-03 10:38:50.000000000 +0200
++++ otrs3-3.1.7+dfsg1/Kernel/Config/Files/Framework.xml	2012-07-03 10:44:02.581785461 +0200
 @@ -2717,7 +2717,7 @@
          <Group>Framework</Group>
          <SubGroup>Core::PDF</SubGroup>

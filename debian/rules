@@ -4,10 +4,10 @@ include /usr/share/cdbs/1/rules/debhelper.mk
 
 OTRSHOME := /usr/share/otrs
 DB_BASE  := /usr/share/dbconfig-common
-DB_DIR   := $(DB_BASE)/data/otrs2
-OTRS_DST := $(CURDIR)/debian/otrs2/
+DB_DIR   := $(DB_BASE)/data/otrs3
+OTRS_DST := $(CURDIR)/debian/otrs3/
 
-binary-post-install/otrs2::
+binary-post-install/otrs3::
 	# setup dbconfig-common
 	# PostgreSQL
 	cat scripts/database/otrs-schema.postgresql.sql \
@@ -16,11 +16,11 @@ binary-post-install/otrs2::
 	cp  debian/schemas/DBUpdate-to-3.0.postgresql.sql \
 		$(OTRS_DST)$(DB_DIR)/upgrade/pgsql/3.0
 	cp  debian/schemas/DBUpdate-to-3.0 \
-		$(OTRS_DST)$(DB_BASE)/scripts/otrs2/upgrade/pgsql/3.0.1
+		$(OTRS_DST)$(DB_BASE)/scripts/otrs3/upgrade/pgsql/3.0.1
 	cp  scripts/DBUpdate-to-3.1.postgresql.sql \
 		$(OTRS_DST)$(DB_DIR)/upgrade/pgsql/3.1
 	cp  debian/schemas/DBUpdate-to-3.1 \
-		$(OTRS_DST)$(DB_BASE)/scripts/otrs2/upgrade/pgsql/3.1.2+dfsg1-2.1
+		$(OTRS_DST)$(DB_BASE)/scripts/otrs3/upgrade/pgsql/3.1.2+dfsg1-2.1
 	cp  scripts/DBUpdate-to-3.1-post.postgresql.sql \
 		$(OTRS_DST)$(DB_DIR)/upgrade/pgsql/3.1.2+dfsg1-2.2
 	# MySQL
@@ -30,11 +30,11 @@ binary-post-install/otrs2::
 	cp  debian/schemas/DBUpdate-to-3.0.mysql.sql \
 		$(OTRS_DST)$(DB_DIR)/upgrade/mysql/3.0
 	cp  debian/schemas/DBUpdate-to-3.0 \
-		$(OTRS_DST)$(DB_BASE)/scripts/otrs2/upgrade/mysql/3.0.1
+		$(OTRS_DST)$(DB_BASE)/scripts/otrs3/upgrade/mysql/3.0.1
 	cp  scripts/DBUpdate-to-3.1.mysql.sql \
 		$(OTRS_DST)$(DB_DIR)/upgrade/mysql/3.1
 	cp  debian/schemas/DBUpdate-to-3.1 \
-		$(OTRS_DST)$(DB_BASE)/scripts/otrs2/upgrade/mysql/3.1.2+dfsg1-2.1
+		$(OTRS_DST)$(DB_BASE)/scripts/otrs3/upgrade/mysql/3.1.2+dfsg1-2.1
 	cp  scripts/DBUpdate-to-3.1-post.mysql.sql \
 		$(OTRS_DST)$(DB_DIR)/upgrade/mysql/3.1.2+dfsg1-2.2
 	# I guess we do not need {redhat,suse,fedora}* stuff in Debian

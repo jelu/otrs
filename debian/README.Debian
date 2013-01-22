@@ -1,7 +1,7 @@
 Initial password and location:
 ------------------------------
 
-After you have finished the setup, you will find your otrs2 under this URL:
+After you have finished the setup, you will find your otrs3 under this URL:
 	http://localhost/otrs/index.pl
 
 The initial username is: root@localhost
@@ -13,7 +13,7 @@ Please change this after you have logged in!
 OTRS package manager:
 ---------------------
 
-otrs2 includes by default a package manager. This will not work with the Debian
+otrs3 includes by default a package manager. This will not work with the Debian
 package, because to have it work, we need to relax too many file permissions.
 
 Also have a look here:
@@ -47,13 +47,13 @@ you want to do it manually and don't know how to start, please use tools like
 pgadmin3 or mysql-navigator, respectively.
 
 The following SQL statement might be useful for postgresql (if your db is
-called 'otrs2') to give apache access to your db:
+called 'otrs3') to give apache access to your db:
 
-  grant all on database otrs2 to "www-data";
+  grant all on database otrs3 to "www-data";
 
 If you have done something wrong, you can always call
 
-  dpkg-reconfigure otrs2
+  dpkg-reconfigure otrs3
 
 again.
 

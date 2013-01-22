@@ -1,5 +1,5 @@
 usr/share/otrs/bin/cgi-bin/  usr/lib/cgi-bin/otrs
-usr/share/doc/otrs2/RELEASE  usr/share/otrs/RELEASE
+usr/share/doc/otrs3/RELEASE  usr/share/otrs/RELEASE
 etc/otrs/Kernel/Config.pm usr/share/otrs/Kernel/Config.pm
 etc/otrs/Kernel/Config/GenericAgent.pm usr/share/otrs/Kernel/Config/GenericAgent.pm
 var/lib/otrs usr/share/otrs/var

@@ -15,7 +15,7 @@ purge_conffile(){
 
 if [ -e /usr/share/dbconfig-common/dpkg/postrm ]; then
 	. /usr/share/dbconfig-common/dpkg/postrm
-	dbc_go otrs2 "$@"
+	dbc_go otrs3 "$@"
 fi
 
 if [ "$1" = purge ]; then
@@ -32,7 +32,7 @@ if [ "$1" = purge ]; then
 	done
 	purge_conffile /etc/otrs/cron
 	purge_conffile /etc/otrs/fetchmailrc
-	purge_conffile /etc/apache2/conf.d/otrs2
+	purge_conffile /etc/apache2/conf.d/otrs3
 	purge_conffile /etc/otrs/database.pm
 	rm -f /var/lib/otrs/httpd/htdocs/maintenance.html
 	rm -rf /usr/share/otrs

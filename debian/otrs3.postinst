@@ -13,7 +13,7 @@ setup_database(){
 	dbc_generate_include_perms="0640"
 	dbc_first_version="2.0.4p01-10"
 	dbc_mysql_createdb_encoding="UTF8"
-	dbc_go otrs2 "$@"
+	dbc_go otrs3 "$@"
 }
 
 setup_ZZZ(){
@@ -49,11 +49,11 @@ setup_cron(){
 
 setup_apache(){
 	if [ -e /etc/otrs/apache2-httpd.include.conf -a \
-		! -e /etc/apache2/conf.d/otrs2 ]; then
-		mv /etc/otrs/apache2-httpd.include.conf /etc/apache2/conf.d/otrs2
+		! -e /etc/apache2/conf.d/otrs3 ]; then
+		mv /etc/otrs/apache2-httpd.include.conf /etc/apache2/conf.d/otrs3
 	fi
 	ucf --three-way --debconf-ok $OTRSHOME/scripts/apache2-httpd.include.conf \
-		/etc/apache2/conf.d/otrs2
+		/etc/apache2/conf.d/otrs3
 	if [ -f /etc/apache2/mods-available/perl.load ]; then
 		a2enmod perl
 	fi

@@ -2,9 +2,9 @@
 # This is because newer Mail::IMAPClient module returns an array reference
 # instead of an array on the ->message action.
 
-diff -Naur otrs2-3.1.7+dfsg1.orig/Kernel/System/MailAccount/IMAPTLS.pm otrs2-3.1.7+dfsg1/Kernel/System/MailAccount/IMAPTLS.pm
---- otrs2-3.1.7+dfsg1.orig/Kernel/System/MailAccount/IMAPTLS.pm	2011-11-14 16:27:31.000000000 +0100
-+++ otrs2-3.1.7+dfsg1/Kernel/System/MailAccount/IMAPTLS.pm	2012-07-28 14:06:33.293674056 +0200
+diff -Naur otrs3-3.1.7+dfsg1.orig/Kernel/System/MailAccount/IMAPTLS.pm otrs3-3.1.7+dfsg1/Kernel/System/MailAccount/IMAPTLS.pm
+--- otrs3-3.1.7+dfsg1.orig/Kernel/System/MailAccount/IMAPTLS.pm	2011-11-14 16:27:31.000000000 +0100
++++ otrs3-3.1.7+dfsg1/Kernel/System/MailAccount/IMAPTLS.pm	2012-07-28 14:06:33.293674056 +0200
 @@ -132,9 +132,9 @@
      my $IMAPObject = $Connect{IMAPObject};
      $IMAPObject->select($IMAPFolder) or die "Could not select: $@\n";
