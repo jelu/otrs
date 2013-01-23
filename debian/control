@@ -3,8 +3,7 @@ Section: web
 Priority: optional
 Maintainer: Jerry Lundström <lundstrom.jerry@gmail.com>
 Standards-Version: 3.9.3
-Build-Depends: cdbs,
- debhelper (>= 7)
+Build-Depends: debhelper (>= 7)
 Homepage: http://www.otrs.org
 
 Package: otrs3
