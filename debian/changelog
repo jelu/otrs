@@ -1,6 +1,8 @@
-otrs3 (3.1.12-1~precise+1) unstable; urgency=medium
+otrs3 (3.1.12-1~unstable+1) unstable; urgency=medium
 
-  * 3.1.12
+  * New upstream version 3.1.12
+    - Removed some patches that was already in upstream version.
+    - Disabled some patches that did not cleanly apply, these needs to be fixed.
 
  -- Jerry Lundström <lundstrom.jerry@gmail.com>  Mon, 21 Jan 2013 20:00:00 +0200
 
